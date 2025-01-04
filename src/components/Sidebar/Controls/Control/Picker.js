@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { styles } from '../../../../constants'
 import { ImageDataContext } from '../../../../context/ImageDataProvider'
@@ -37,6 +37,10 @@ const Picker = ({ position }) => {
     setImageKeys(newImageKeys)
   }
 
+  useEffect(() => {
+    setValue(parseInt(imageKeys[position]))
+  }, [imageKeys, position])
+  
   return (
     <PickerContainer>
       <Button onClick={() => handleValueChange(value - 1)} type={'subtract'}/>

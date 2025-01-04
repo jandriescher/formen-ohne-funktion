@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
-import { styles } from '../../../constants'
 import { ImageDataContext } from '../../../context/ImageDataProvider'
 import ImageGrid from './ImageGrid'
 
@@ -10,7 +9,6 @@ const ImagePlaneContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-bottom: ${styles.borders.strength} solid black;
   height: 80%;
 `
 const ImagePlane = () => {

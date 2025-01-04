@@ -15,7 +15,7 @@ const styles = {
     }
   },
   spacing: {
-    padding: '1.2rem'
+    padding: '1.9rem'
   }
 }
 
