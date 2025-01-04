@@ -1,4 +1,4 @@
-const availableImageKeys = ['01', '02', '03', '04']
+const availableImageKeys = [1, 2, 3, 4]
 
 export {
   availableImageKeys

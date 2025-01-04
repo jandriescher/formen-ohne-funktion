@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { availableImageKeys } from '../constants'
+import { formatNumber } from '../utils'
 
 const ImageDataContext = createContext()
 
@@ -12,7 +13,7 @@ const ImageDataProvider = ({ children }) => {
   })
 
   const computeImageCode = (imageKeys) => {
-    return `${imageKeys.topLeft}.${imageKeys.topRight}.${imageKeys.bottomLeft}.${imageKeys.bottomRight}`
+    return `${formatNumber(imageKeys.topLeft)}.${formatNumber(imageKeys.topRight)}.${formatNumber(imageKeys.bottomLeft)}.${formatNumber(imageKeys.bottomRight)}`
   }
 
   const setRandomImageKeys = () => {

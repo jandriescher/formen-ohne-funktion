@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { ImageDataContext } from '../../../../context/ImageDataProvider'
+import { formatNumber } from '../../../../utils'
 
 const PickerContainer = styled.div`
   margin-left: 0.5rem;
@@ -25,29 +26,21 @@ const Value = styled.p`
 const Picker = ({ position }) => {
   const { imageKeys, setImageKeys } = useContext(ImageDataContext)
 
-  const [key, setKey] = useState(imageKeys[position])
-  const [value, setValue] = useState(parseInt(key))
-
-  const updateImageKeys = (newKey) => {
-    setKey(newKey)
-    const newImageKeys = { ...imageKeys, [position]: `0${newKey}`}
-    setImageKeys(newImageKeys)
-  }
+  const [value, setValue] = useState(parseInt(imageKeys[position]))
 
   const handleValueChange = (newValue) => {
-    if (newValue >= 0 && newValue <= 9) {
-      setValue(newValue)
-      updateImageKeys(newValue)
-    }
+    setValue(newValue)
+    const newImageKeys = { ...imageKeys, [position]: newValue }
+    setImageKeys(newImageKeys)
   }
-
+  
   const isMaxValue = (value) => value === 4
   const isMinValue = (value) => value === 1
 
   return (
     <PickerContainer>
       <Button disabled={isMinValue(value)} onClick={() => handleValueChange(value - 1)}>-</Button>
-      <Value>{value}</Value>
+      <Value>{formatNumber(value)}</Value>
       <Button disabled={isMaxValue(value)} onClick={() => handleValueChange(value + 1)}>+</Button>
     </PickerContainer>
   )
