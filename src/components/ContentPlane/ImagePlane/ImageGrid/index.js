@@ -23,7 +23,7 @@ const ImageGrid = ({ imageKeys }) => {
   }
 
   return (
-    <ImageGridContainer>
+    <ImageGridContainer id='image-grid'>
       <Tile src={imagePaths.topLeft} alt="topLeft" />
       <Tile src={imagePaths.topRight} alt="topRight" />
       <Tile src={imagePaths.bottomLeft} alt="bottomLeft" />
