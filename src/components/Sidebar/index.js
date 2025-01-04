@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Header from './Header'
+import Controles from './Controles'
 
 const SideBarContainer = styled.div`
   background-color: white;
@@ -16,6 +17,7 @@ const Sidebar = () => {
   return (
     <SideBarContainer>
       <Header />
+      <Controles />
     </SideBarContainer>
   )
 }
