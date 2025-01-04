@@ -5,12 +5,16 @@ import ImagePlane from './ImagePlane'
 const ContentPlaneContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-color: white;
+  border-top: 5px solid black;
+  border-left: 2.5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
 `
-const ContentPlane = ({ imagePaths }) => {
+const ContentPlane = ({ imageKeys }) => {
   return (
     <ContentPlaneContainer>
-      <ImagePlane imagePaths={imagePaths} />
+      <ImagePlane imageKeys={imageKeys} />
       <ImageCode />
     </ContentPlaneContainer>
   )

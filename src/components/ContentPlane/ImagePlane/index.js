@@ -6,14 +6,14 @@ const ImagePlaneContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: pink;
+  background-color: white;
+  border-bottom: 2.5px solid black;
   height: 80%;
 `
-const ImagePlane = ({ imagePaths }) => {
-  console.log("🚀 ~ ImagePlane ~ imagePaths:", imagePaths)
+const ImagePlane = ({ imageKeys }) => {
   return (
     <ImagePlaneContainer>
-      <ImageGrid />
+      <ImageGrid imageKeys={imageKeys} />
     </ImagePlaneContainer>
   )
 }
