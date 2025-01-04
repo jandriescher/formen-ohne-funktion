@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { styles } from '../../../constants'
-import Controle from './Controle'
+import Control from './Control'
 
-const ControlesContainer = styled.div`
+const ControlsContainer = styled.div`
   display: grid;
   grid-template-columns: [first] 50% [second] 50% [end];
   grid-template-rows: [row1-start] 50% [row2-start] 50% [last-line];
@@ -15,15 +15,15 @@ const ControlesContainer = styled.div`
   }
 `
 
-const Controles = () => {
+const Controls = () => {
   return (
-    <ControlesContainer>
-      <Controle title={'Oben Links'} position={'topLeft'}/>
-      <Controle title={'Oben Rechts'} position={'topRight'} />
-      <Controle title={'Unten Links'} position={'bottomLeft'} />
-      <Controle title={'Unten Rechts'} position={'bottomRight'} />
-    </ControlesContainer>
+    <ControlsContainer>
+      <Control title={'Oben Links'} position={'topLeft'}/>
+      <Control title={'Oben Rechts'} position={'topRight'} />
+      <Control title={'Unten Links'} position={'bottomLeft'} />
+      <Control title={'Unten Rechts'} position={'bottomRight'} />
+    </ControlsContainer>
   )
 }
 
-export default Controles
+export default Controls

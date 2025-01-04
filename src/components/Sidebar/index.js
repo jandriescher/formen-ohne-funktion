@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Controles from './Controles'
+import Controls from './Controls'
 import Header from './Header'
 
 const SideBarContainer = styled.div`
@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <SideBarContainer>
       <Header />
-      <Controles />
+      <Controls />
     </SideBarContainer>
   )
 }

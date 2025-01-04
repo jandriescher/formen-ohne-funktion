@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Picker from './Picker'
 
-const ControleContainer = styled.div`
+const ControlContainer = styled.div`
 `
 
 const Ttile = styled.p`
@@ -11,13 +11,13 @@ const Ttile = styled.p`
   margin-bottom: 0.5rem;
 `
 
-const Controle = ({ title, position }) => {
+const Control = ({ title, position }) => {
   return (
-    <ControleContainer>
+    <ControlContainer>
       <Ttile>{title}</Ttile>
       <Picker position={position} />
-    </ControleContainer>
+    </ControlContainer>
   )
 }
 
-export default Controle
+export default Control
