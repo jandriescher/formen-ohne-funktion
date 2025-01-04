@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import ContentPlane from './components/ContentPlane'
 import Sidebar from './components/Sidebar'
@@ -11,14 +11,20 @@ const AppContainer = styled.div`
 `
 
 const App = () => {
-  const availableImageKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-  const fourInitialRandomKeys = availableImageKeys.sort(() => 0.5 - Math.random()).slice(0, 4)
-  const [imagePaths, setImagePaths] = useState(fourInitialRandomKeys)
+  const availableImageKeys = ['1', '2', '3', '4']
+  const initialRandomKeyMap = {
+    topLeft: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
+    topRight: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
+    bottomLeft: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
+    bottomRight: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)]
+  }
+
+  const [imageKeys, setImageKeys] = useState(initialRandomKeyMap)
 
   return (
     <AppContainer>
       <Sidebar />
-      <ContentPlane imagePaths={imagePaths} />
+      <ContentPlane imageKeys={imageKeys} />
     </AppContainer> 
   )
 }
