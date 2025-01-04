@@ -4,7 +4,7 @@ import { ImageDataContext } from '../../../../context/ImageDataProvider'
 import { formatNumber } from '../../../../utils'
 
 const PickerContainer = styled.div`
-  margin-left: 0.5rem;
+  padding-left: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,8 @@ const PickerContainer = styled.div`
 const Button = styled.div` 
   width: 0px;
   height: 0px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
   ${({ type }) => type === 'add' ? 'border-left: 10px solid black;' : 'border-right: 10px solid black;'}
 `
 

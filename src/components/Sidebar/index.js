@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 import Controls from './Controls'
 import Header from './Header'
+import Description from './Description'
 
 const SideBarContainer = styled.div`
   background-color: white;
-  display: grid;
-  grid-template-columns: [first] auto [end];
-  grid-template-rows: [row1-start] 64px [row2-start] 238px [row3-start] 109px [last-line];
 `
 
 const Sidebar = () => {
   return (
     <SideBarContainer>
       <Header />
+      <Description />
       <Controls />
     </SideBarContainer>
   )

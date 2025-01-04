@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import Picker from './Picker'
+import { styles } from '../../../../constants'
 
 const ControlContainer = styled.div`
+  padding: ${styles.spacing.padding};
 `
 
-const Ttile = styled.p`
+const Ttile = styled.div`
   font-size: 1.2rem;
   font-weight: bold;
-  margin-left: 0.5rem;
-  margin-bottom: 0.5rem;
 `
 
 const Control = ({ title, position }) => {
