@@ -11,15 +11,27 @@ const ImageGridContainer = styled.div`
   overflow: auto;
   grid-template-columns: [first] 50% [line2] 50% [end];
   grid-template-rows: [row1-start] 50% [row2-start] 50% [last-line];
-  background-color: yellow;
+  background-color: white;
 `
-const ImageGrid = ({ imagePaths }) => {
+
+const Tile = styled.img`
+  width: 100%;
+`
+
+const ImageGrid = ({ imageKeys }) => {
+  const imagePaths = {
+    topLeft: `/images/gridFiles/topLeft/${imageKeys.topLeft}.png`,
+    topRight: `/images/gridFiles/topRight/${imageKeys.topRight}.png`,
+    bottomLeft: `/images/gridFiles/bottomLeft/${imageKeys.bottomLeft}.png`,
+    bottomRight: `/images/gridFiles/bottomRight/${imageKeys.bottomRight}.png`
+  }
+
   return (
     <ImageGridContainer>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
+      <Tile src={imagePaths.topLeft} alt="topLeft" />
+      <Tile src={imagePaths.topRight} alt="topRight" />
+      <Tile src={imagePaths.bottomLeft} alt="bottomLeft" />
+      <Tile src={imagePaths.bottomRight} alt="bottomRight" />
     </ImageGridContainer>
   )
 }
