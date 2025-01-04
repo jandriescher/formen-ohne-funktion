@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { styles } from '../../../constants'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ const HeaderContainer = styled.div`
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
-  border-bottom: 5px solid black;
+  border-bottom: ${styles.borders.strength} solid black;
 `
 
 const Header = () => {

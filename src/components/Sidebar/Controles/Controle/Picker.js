@@ -10,11 +10,12 @@ const PickerContainer = styled.div`
   justify-content: center;
 `
 
-const Button = styled.button`
-  padding: 0.5rem;
-  border: none;
-  background-color: #f0f0f0;
-  cursor: pointer;
+const Button = styled.div` 
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  ${({ type }) => type === 'add' ? 'border-left: 10px solid black;' : 'border-right: 10px solid black;'}
 `
 
 const Value = styled.p`
@@ -28,20 +29,18 @@ const Picker = ({ position }) => {
 
   const [value, setValue] = useState(parseInt(imageKeys[position]))
 
-  const handleValueChange = (newValue) => {
+  const handleValueChange = (input) => {
+    const newValue = input > 4 ? 1 : input < 1 ? 4 : input
     setValue(newValue)
     const newImageKeys = { ...imageKeys, [position]: newValue }
     setImageKeys(newImageKeys)
   }
-  
-  const isMaxValue = (value) => value === 4
-  const isMinValue = (value) => value === 1
 
   return (
     <PickerContainer>
-      <Button disabled={isMinValue(value)} onClick={() => handleValueChange(value - 1)}>-</Button>
+      <Button onClick={() => handleValueChange(value - 1)} type={'subtract'}/>
       <Value>{formatNumber(value)}</Value>
-      <Button disabled={isMaxValue(value)} onClick={() => handleValueChange(value + 1)}>+</Button>
+      <Button onClick={() => handleValueChange(value + 1)} type={'add'}/>
     </PickerContainer>
   )
 }

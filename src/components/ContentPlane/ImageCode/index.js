@@ -8,7 +8,6 @@ const ImageCodeContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-top: 2.5px solid black;
   height: 20%;
   font-size: 2rem;
   font-weight: bold;
