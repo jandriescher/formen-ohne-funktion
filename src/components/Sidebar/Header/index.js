@@ -1,0 +1,21 @@
+import styled from 'styled-components'
+
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+`
+
+const Header = () => {
+  return (
+    <HeaderContainer>
+      <p>FORMEN (OHNE) FUNKTION</p>
+    </HeaderContainer>
+  )
+}
+
+export default Header
