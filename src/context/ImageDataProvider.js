@@ -1,10 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react'
+import { availableImageKeys } from '../constants'
 
 const ImageDataContext = createContext()
 
 const ImageDataProvider = ({ children }) => {
-  const availableImageKeys = ['01', '02', '03', '04']
-  
   const generateRandomImageKeys = () => ({
     topLeft: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
     topRight: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
