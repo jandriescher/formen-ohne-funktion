@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { styles } from '../../../constants'
 
 const DescriptionContainer = styled.div`
-  font-size: ${styles.font.size};
-  font-weight: ${styles.font.weight};
+  font-size: ${styles.font.paragraph.size};
+  font-weight: ${styles.font.paragraph.weight};
   padding: ${styles.spacing.padding};
   border-bottom: ${styles.borders.strength} solid black;
 `

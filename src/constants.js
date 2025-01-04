@@ -5,11 +5,17 @@ const styles = {
     strength:  '2px'
   },
   font: {
-    size: '1.2rem',
-    weight: 'bold'
+    heading: {
+      size: '1.5rem',
+      weight: 'bold'
+    },
+    paragraph: {
+      size: '1.2rem',
+      weight: 'bold'
+    }
   },
   spacing: {
-    padding: '1rem'
+    padding: '1.2rem'
   }
 }
 

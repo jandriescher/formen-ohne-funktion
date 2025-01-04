@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
+import { styles } from '../../../constants'
 import { ImageDataContext } from '../../../context/ImageDataProvider'
 
 const ImageCodeContainer = styled.div`
@@ -9,8 +10,8 @@ const ImageCodeContainer = styled.div`
   justify-content: center;
   background-color: white;
   height: 20%;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: ${styles.font.heading.weight};
 `
 const ImageCode = () => {
   const { imageCode } = useContext(ImageDataContext)

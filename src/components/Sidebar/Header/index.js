@@ -5,8 +5,8 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: ${styles.font.heading.size};
+  font-weight: ${styles.font.heading.weight};
   padding: ${styles.spacing.padding};
   border-bottom: ${styles.borders.strength} solid black;
 `

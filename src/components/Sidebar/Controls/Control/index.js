@@ -7,8 +7,9 @@ const ControlContainer = styled.div`
 `
 
 const Ttile = styled.div`
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: ${styles.font.paragraph.size};
+  font-weight: ${styles.font.paragraph.weight};
+  margin-bottom: ${styles.spacing.padding};
 `
 
 const Control = ({ title, position }) => {
