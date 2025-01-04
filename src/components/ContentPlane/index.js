@@ -14,7 +14,7 @@ const ContentPlaneContainer = styled.div`
 const ContentPlane = ({ imageKeys }) => {
   return (
     <ContentPlaneContainer>
-      <ImagePlane imageKeys={imageKeys} />
+      <ImagePlane />
       <ImageCode />
     </ContentPlaneContainer>
   )

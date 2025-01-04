@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import styled from 'styled-components'
+import { ImageDataContext } from '../../../context/ImageDataProvider'
 import ImageGrid from './ImageGrid'
 
 const ImagePlaneContainer = styled.div`
@@ -10,7 +12,9 @@ const ImagePlaneContainer = styled.div`
   border-bottom: 2.5px solid black;
   height: 80%;
 `
-const ImagePlane = ({ imageKeys }) => {
+const ImagePlane = () => {
+  const { imageKeys } = useContext(ImageDataContext)
+
   return (
     <ImagePlaneContainer>
       <ImageGrid imageKeys={imageKeys} />

@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import styled from 'styled-components'
 import ContentPlane from './components/ContentPlane'
 import Sidebar from './components/Sidebar'
+import { ImageDataProvider } from './context/ImageDataProvider'
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -11,21 +11,13 @@ const AppContainer = styled.div`
 `
 
 const App = () => {
-  const availableImageKeys = ['1', '2', '3', '4']
-  const initialRandomKeyMap = {
-    topLeft: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
-    topRight: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
-    bottomLeft: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)],
-    bottomRight: availableImageKeys[Math.floor(Math.random() * availableImageKeys.length)]
-  }
-
-  const [imageKeys, setImageKeys] = useState(initialRandomKeyMap)
-
   return (
-    <AppContainer>
-      <Sidebar />
-      <ContentPlane imageKeys={imageKeys} />
-    </AppContainer> 
+    <ImageDataProvider>
+      <AppContainer>
+        <Sidebar />
+        <ContentPlane/>
+      </AppContainer>
+    </ImageDataProvider>
   )
 }
 
