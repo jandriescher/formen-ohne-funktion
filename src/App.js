@@ -6,8 +6,8 @@ import { ImageDataProvider } from './context/ImageDataProvider'
 const AppContainer = styled.div`
   height: 100vh;
   display: grid;
-  grid-template-columns: [first] 400px [line2] auto [end];
-  grid-template-rows: [row1-start] auto [last-line];
+  grid-template-columns: 410px auto;
+  grid-template-rows: auto;
 `
 
 const App = () => {
