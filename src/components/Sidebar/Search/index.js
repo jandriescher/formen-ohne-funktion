@@ -14,9 +14,16 @@ const SearchContainer = styled.div`
 `
 
 const SearchInput = styled.input`
+  all: unset;
+  border: ${styles.borders.strength} solid black;
+  height: 2rem;
+  padding-left: 0.5rem;
   font-size: ${styles.font.paragraph.size};
   font-weight: ${styles.font.paragraph.weight};
   margin-top: 0.5rem;
+  &:focus {
+    border: ${styles.borders.strength} solid #2189FF;
+  }
   ${({ hasError }) => hasError && `color: red;`
 }
 `
