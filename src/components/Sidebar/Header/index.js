@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-      FORMEN (OHNE) FUNKTION
+      FORM(EN) OHNE FUNKTION
     </HeaderContainer>
   )
 }
