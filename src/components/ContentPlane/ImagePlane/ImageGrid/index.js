@@ -16,10 +16,10 @@ const Tile = styled.img`
 
 const ImageGrid = ({ imageKeys }) => {
   const imagePaths = {
-    topLeft: `/images/gridFiles/topLeft/${imageKeys.topLeft}.png`,
-    topRight: `/images/gridFiles/topRight/${imageKeys.topRight}.png`,
-    bottomLeft: `/images/gridFiles/bottomLeft/${imageKeys.bottomLeft}.png`,
-    bottomRight: `/images/gridFiles/bottomRight/${imageKeys.bottomRight}.png`
+    topLeft: `./images/gridFiles/topLeft/${imageKeys.topLeft}.png`,
+    topRight: `./images/gridFiles/topRight/${imageKeys.topRight}.png`,
+    bottomLeft: `./images/gridFiles/bottomLeft/${imageKeys.bottomLeft}.png`,
+    bottomRight: `./images/gridFiles/bottomRight/${imageKeys.bottomRight}.png`
   }
 
   return (

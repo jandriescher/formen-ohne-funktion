@@ -2,7 +2,6 @@
   "name": "formen-ohne-funktion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jan.driescher.github.io/formen-ohne-funktion",
   "dependencies": {
     "cra-template": "1.2.0",
     "html2canvas": "^1.4.1",
