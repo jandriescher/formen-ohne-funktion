@@ -9,7 +9,6 @@ const ImagePlaneContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: 80%;
 `
 const ImagePlane = () => {
   const { imageKeys } = useContext(ImageDataContext)

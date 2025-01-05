@@ -6,16 +6,16 @@ const styles = {
   },
   font: {
     heading: {
-      size: '1.5rem',
+      size: '1.2rem',
       weight: 'bold'
     },
     paragraph: {
-      size: '1.2rem',
+      size: '1.17rem',
       weight: 'bold'
     }
   },
   spacing: {
-    padding: '1.9rem'
+    padding: '1.5rem'
   }
 }
 

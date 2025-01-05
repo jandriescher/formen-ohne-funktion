@@ -10,7 +10,6 @@ const DownloadContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: ${styles.spacing.padding};
-  border-bottom: ${styles.borders.strength} solid black;
 `
 
 const Button = styled.button`
