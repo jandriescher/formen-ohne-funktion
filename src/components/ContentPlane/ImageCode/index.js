@@ -9,7 +9,6 @@ const ImageCodeContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: 20%;
   font-size: 2.5rem;
   font-weight: ${styles.font.heading.weight};
 `

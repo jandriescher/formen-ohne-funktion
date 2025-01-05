@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 const ImageGridContainer = styled.div`
   display: grid;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   overflow: auto;
   grid-template-columns: [first] 50% [line2] 50% [end];
   grid-template-rows: [row1-start] 50% [row2-start] 50% [last-line];
