@@ -34,8 +34,9 @@ const Search = () => {
 
   const validateInput = (input) => {
     const hasValidLength = input.length === 11
-    const hasValidFormat = input.match(/^[0-4]{2}\.[0-4]{2}\.[0-4]{2}\.[0-4]{2}$/)
-    const isValid = hasValidLength && hasValidFormat
+    const hasValidFormat = input.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$/)
+    const containsDoubleZero = input.includes('00')
+    const isValid = hasValidLength && hasValidFormat && !containsDoubleZero
     setHasError(!isValid)
     if (input.length === 0) setHasError(false)
     return isValid
