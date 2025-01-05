@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/formen-ohne-funktion/static/css/main.e6c13ad2.css",
-    "main.js": "/formen-ohne-funktion/static/js/main.b2f54eea.js",
+    "main.js": "/formen-ohne-funktion/static/js/main.7caf9707.js",
     "index.html": "/formen-ohne-funktion/index.html",
     "main.e6c13ad2.css.map": "/formen-ohne-funktion/static/css/main.e6c13ad2.css.map",
-    "main.b2f54eea.js.map": "/formen-ohne-funktion/static/js/main.b2f54eea.js.map"
+    "main.7caf9707.js.map": "/formen-ohne-funktion/static/js/main.7caf9707.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.b2f54eea.js"
+    "static/js/main.7caf9707.js"
   ]
 }
