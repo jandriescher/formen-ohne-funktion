@@ -24,6 +24,8 @@ const Value = styled.p`
   font-weight: ${styles.font.paragraph.weight};
   width: 8rem;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 `
 
 const Picker = ({ position }) => {
