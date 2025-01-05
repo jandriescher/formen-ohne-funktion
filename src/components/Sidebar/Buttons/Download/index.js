@@ -1,16 +1,8 @@
 import html2canvas from 'html2canvas'
 import { useContext } from 'react'
 import styled from 'styled-components'
-import { styles } from '../../../constants'
-import { ImageDataContext } from '../../../context/ImageDataProvider'
-
-
-const DownloadContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: ${styles.spacing.padding};
-`
+import { styles } from '../../../../constants'
+import { ImageDataContext } from '../../../../context/ImageDataProvider'
 
 const Button = styled.button`
   height: 3rem;
@@ -21,6 +13,7 @@ const Button = styled.button`
   border: none;
   border-radius: 100px;
   cursor: pointer;
+  flex-grow: 1;
 `
 
 const Download = () => {
@@ -39,9 +32,7 @@ const Download = () => {
   }
 
   return (
-    <DownloadContainer>
-      <Button onClick={handleDownload}>Download</Button>
-    </DownloadContainer>
+    <Button onClick={handleDownload}>Download</Button>
   )
 }
 
