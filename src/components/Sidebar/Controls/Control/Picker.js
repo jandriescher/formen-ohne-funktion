@@ -22,7 +22,8 @@ const Button = styled.div`
 const Value = styled.p`
   font-size: ${styles.font.paragraph.size};
   font-weight: ${styles.font.paragraph.weight};
-  margin: 0 3.5rem;
+  width: 8rem;
+  text-align: center;
 `
 
 const Picker = ({ position }) => {
