@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { styles } from '../../../../constants'
+import { availableImageKeys, styles } from '../../../../constants'
 import { ImageDataContext } from '../../../../context/ImageDataProvider'
 import { formatNumber } from '../../../../utils'
 
@@ -31,7 +31,7 @@ const Picker = ({ position }) => {
   const [value, setValue] = useState(parseInt(imageKeys[position]))
 
   const handleValueChange = (input) => {
-    const newValue = input > 4 ? 1 : input < 1 ? 4 : input
+    const newValue = input > availableImageKeys.length ? 1 : input < 1 ? availableImageKeys.length : input
     setValue(newValue)
     const newImageKeys = { ...imageKeys, [position]: newValue }
     setImageKeys(newImageKeys)
