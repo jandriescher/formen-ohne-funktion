@@ -4,6 +4,8 @@
 
 tba
 
+This project is deployed to GitHub pages [here](https://jandriescher.github.io/formen-ohne-funktion/). Come check it out! ✨
+
 ## Tech
 
 ### Scripts
