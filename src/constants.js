@@ -3,7 +3,6 @@ const generateAvailableImageKeys = (maxValue) => {
 }
 
 const availableImageKeys = generateAvailableImageKeys(50)
-console.log("🚀 ~ availableImageKeys:", availableImageKeys)
 
 const styles = {
   borders: {
