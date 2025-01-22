@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { ImageDataContext } from '../../../context/ImageDataProvider'
-import { styles } from '../../../constants'
+import { availableImageKeys, styles } from '../../../constants'
 
 const SearchContainer = styled.div`
   display: flex;
@@ -36,7 +36,8 @@ const Search = () => {
     const hasValidLength = input.length === 11
     const hasValidFormat = input.match(/^[0-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$/)
     const containsDoubleZero = input.includes('00')
-    const isValid = hasValidLength && hasValidFormat && !containsDoubleZero
+    const isWithinRange = input.split('.').every((value) => availableImageKeys.includes(parseInt(value)))
+    const isValid = hasValidLength && hasValidFormat && !containsDoubleZero && isWithinRange
     setHasError(!isValid)
     if (input.length === 0) setHasError(false)
     return isValid
