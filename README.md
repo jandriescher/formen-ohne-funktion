@@ -1,7 +1,5 @@
 # Form(en) ohne Funktion
 
-## Project
-
 This project is part of my close friend Jannik's bachelor thesis discussing the relationshiop of form and function.
 The website let's you generate 6.25M combinations of 4 tiles and download your artwork!
 
